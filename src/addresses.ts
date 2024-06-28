@@ -245,7 +245,7 @@ const BASE_SEPOLIA_ADDRESSES: ChainAddresses = {
   v3MigratorAddress: '0x3BfB5316324Ecb1D52D55243A2A0631890709c00',
   nonfungiblePositionManagerAddress: '0xa7D7557CDD505Da17dc8a220251A0e4b6d6cD887',
   tickLensAddress: '0xb25c8944C7Fa103112897BFfAd830529EEf7Bc18',
-  swapRouter02Address: '0x0b078AFf55764b627c2b7BB5d4102D8422333aCB'
+  swapRouter02Address: '0x0895aE285eAE68fA9006b4166D55AFc879594381'
 }
 
 export const CHAIN_TO_ADDRESSES_MAP: Record<SupportedChainsType, ChainAddresses> = {
