@@ -248,6 +248,16 @@ const BASE_SEPOLIA_ADDRESSES: ChainAddresses = {
   swapRouter02Address: '0x0895aE285eAE68fA9006b4166D55AFc879594381'
 }
 
+const TAKIO_ADDRESSES: ChainAddresses = {
+  v3CoreFactoryAddress: '0xfCA1AEf282A99390B62Ca8416a68F5747716260c',
+  multicallAddress: '0xd710BC1eB7D80bd1064830a268079CB5FeD3Af51',
+  quoterAddress: '0xe22574aA2895b265B09Cbe6264DFd5121a555B55',
+  v3MigratorAddress: '0xF2682012D577514Cbc6162E712822716EA537637',
+  nonfungiblePositionManagerAddress: '0xE84670fc7D7053C80085A7f7e89C6d220d2f41C7',
+  tickLensAddress: '0x5291030B4a200C08910E90371c20A891e23946c2',
+  swapRouter02Address: '0x38be8Bc0cDfF59eF9B9Feb0d949B2052359e97d9'
+}
+
 export const CHAIN_TO_ADDRESSES_MAP: Record<SupportedChainsType, ChainAddresses> = {
   [ChainId.MAINNET]: MAINNET_ADDRESSES,
   [ChainId.OPTIMISM]: OPTIMISM_ADDRESSES,
@@ -270,7 +280,8 @@ export const CHAIN_TO_ADDRESSES_MAP: Record<SupportedChainsType, ChainAddresses>
   [ChainId.ZORA_SEPOLIA]: ZORA_SEPOLIA_ADDRESSES,
   [ChainId.ROOTSTOCK]: ROOTSTOCK_ADDRESSES,
   [ChainId.BLAST]: BLAST_ADDRESSES,
-  [ChainId.BASE_SEPOLIA]: BASE_SEPOLIA_ADDRESSES
+  [ChainId.BASE_SEPOLIA]: BASE_SEPOLIA_ADDRESSES,
+  [ChainId.TAIKO]: TAKIO_ADDRESSES
 }
 
 /* V3 Contract Addresses */
@@ -373,7 +384,7 @@ export const MIXED_ROUTE_QUOTER_V1_ADDRESSES: AddressMap = SUPPORTED_CHAINS.redu
 export const SWAP_ROUTER_02_ADDRESSES = (chainId: number) => {
   if (SUPPORTED_CHAINS.includes(chainId)) {
     const id = chainId as SupportedChainsType
-    return CHAIN_TO_ADDRESSES_MAP[id].swapRouter02Address ?? '0x68b3465833fb72A70ecDF485E0e4C7bD8665Fc45'
+    return CHAIN_TO_ADDRESSES_MAP[id].swapRouter02Address ?? '0x38be8Bc0cDfF59eF9B9Feb0d949B2052359e97d9'
   }
   return ''
 }
